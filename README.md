@@ -66,15 +66,9 @@ See [.zeusrc.example](.zeusrc.example) for a template.
 Zeus accepts commands as arguments:
 
 ```sh
-# Setup Docker on remote server (one-time)
-npx setup
-
-# Deploy your application
-node dist/index.js deploy
-
-# Or use npm scripts
-npx @barelyhuman/zeus setup
-npx @barelyhuman/zeus deploy
+# using npx
+npx -p @barelyhuman/zeus@latest zeus setup
+npx -p @barelyhuman/zeus@latest zeus deploy
 ```
 
 Or install globally and use the `zeus` command:
