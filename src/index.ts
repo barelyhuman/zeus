@@ -13,6 +13,10 @@ import {
 import { execa } from 'execa'
 import { access, readFile } from 'fs/promises'
 import { join } from 'path'
+import { createRequire } from 'module'
+
+const require = createRequire(import.meta.url)
+const pkg = require('../package.json')
 
 interface ZeusConfig {
   host: string
@@ -608,6 +612,12 @@ async function main() {
   console.clear()
 
   const command = process.argv[2]
+
+  // Handle version flag
+  if (command === '-v' || command === '--version') {
+    console.log(`v${pkg.version}`)
+    process.exit(0)
+  }
 
   if (!command || !['setup', 'deploy'].includes(command)) {
     intro('🚀 Zeus - Docker Build Server')
