@@ -1,0 +1,9 @@
+{
+  "host": "example.com",
+  "user": "ubuntu",
+  "dockerfile": "./Dockerfile",
+  "platform": "linux/amd64",
+  "image": "my-app:latest",
+  "ports": "8080:80",
+  "env": "NODE_ENV=production"
+}
