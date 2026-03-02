@@ -24,8 +24,11 @@
     "execa": "^7.0.0"
   },
   "devDependencies": {
+    "@barelyhuman/prettier-config": "^2.0.2",
     "@types/node": "^20.0.0",
+    "prettier": "^3.8.1",
     "ts-node": "^10.0.0",
     "typescript": "^5.0.0"
-  }
+  },
+  "prettier": "@barelyhuman/prettier-config"
 }
