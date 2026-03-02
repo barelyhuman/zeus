@@ -7,6 +7,13 @@
   "bin": {
     "zeus": "./dist/index.js"
   },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
